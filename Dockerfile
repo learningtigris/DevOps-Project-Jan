@@ -1,6 +1,5 @@
-# Pull base image 
-From tomcat:8-jre8 
+FROM tomcat:8-jre8
+MAINTAINER "aniketmore956199@gmail.com"
 
-# Maintainer 
-MAINTAINER "aniketmore956199@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+# Copy the built WAR into Tomcat webapps directory
+COPY webapp/target/webapp.war /usr/local/tomcat/webapps/
